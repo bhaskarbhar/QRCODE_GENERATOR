@@ -95,8 +95,8 @@ def register():
       number= str(random.randint(1000,9999))
       otp1="Your otp for registration in QR Code Generator is "+number #SSL means secure socket layer used for data encryption
       server= smtplib.SMTP_SSL("smtp.gmail.com",465)
-      server.login("bgmcsproject2021@gmail.com","#qrcg2021")
-      server.sendmail("bgmcsproject2021@gmail.com",email,otp1)
+      server.login(email_id,password) #Here emaild_id and password has been removed for security reasons. Give your email_id and password and quote them "".
+      server.sendmail(email_id,email,otp1)
       server.quit()
    #user defined function for registration
    def register_file():
